@@ -2,14 +2,16 @@ body
 {
     margin: 0 auto;
     max-width: 720px;
+    text-align: center;
 }
 
 header
 {
-    font-size: x-large;
-    font-weight: 700;
+    background: url('../img/doge.jpg') no-repeat;
+    border-radius: 60px;
     margin: 50px auto;
-    text-align: center;
+    height: 120px;
+    width: 120px;
 }
 
 article
@@ -20,6 +22,7 @@ article
 article section
 {
     margin: 0 0 50px 0;
+    text-align: left;
 }
 
 article section h1
@@ -35,15 +38,4 @@ article section p
     font-family: sans-serif;
     font-size: normal;
     line-height: 18px;
-}
-
-footer
-{
-    margin: 50px 25px;
-    text-align: center;
-}
-
-footer small
-{
-    font-size: small;
 }
