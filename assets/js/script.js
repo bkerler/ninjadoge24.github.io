@@ -30,6 +30,9 @@ function renderPost(id) {
     if (Posts[id]) {
         $("article").html("<section id='" + id + "'></section>");
         $("#" + id).html("<pre>" + Posts[id] + "</pre>");
+        $("#" + id).append("<small><a target='_blank' href='https://github.com/ninjadoge24/ninjadoge24.github.io/commits/master/posts/" + Index[id] + "' >history</a></small> &middot; ");
+        $("#" + id).append("<small><a target='_blank' href='https://github.com/ninjadoge24/ninjadoge24.github.io/edit/master/posts/" + Index[id] + "'>edit</a></small> &middot; ");
+        $("#" + id).append("<small><a target='_blank' href='https://raw.githubusercontent.com/ninjadoge24/ninjadoge24.github.io/master/posts/" + Index[id] + "'>source</a></small>");
     } else {
         $("article").html("<small>Sorry! That post doesn't exist.</small>");
     };
