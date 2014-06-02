@@ -21,21 +21,12 @@ article
 
 article section
 {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     margin: 0 0 50px 0;
     text-align: left;
 }
 
-article section h1
-{
-    font-family: sans-serif;
-    font-size: large;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-}
-
 article section p
 {
-    font-family: sans-serif;
-    font-size: normal;
-    line-height: 18px;
+    line-height: 24px;
 }
