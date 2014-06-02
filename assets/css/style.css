@@ -22,10 +22,14 @@ article
 
 article section
 {
-    cursor: default;
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     margin: 0 0 50px 0;
     text-align: left;
+}
+
+article section :first-child
+{
+    cursor: pointer;
 }
 
 article section p
