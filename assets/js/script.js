@@ -25,3 +25,12 @@ function renderPosts() {
         };
     };
 };
+
+function renderPost(id) {
+    if (Posts[id]) {
+        $("article").html("<section id='" + id + "'></section>");
+        $("#" + id).html("<pre>" + Posts[id] + "</pre>");
+    } else {
+        $("article").html("<small>Sorry! That post doesn't exist.</small>");
+    };
+};
