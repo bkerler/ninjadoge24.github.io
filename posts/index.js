@@ -1,4 +1,4 @@
 Index = [
-	"001-hello-world.md",
-	"002-this-is-pretty-fuckin-cool-right.md"
+	"001-hello-world",
+	"002-this-is-pretty-fuckin-cool-right"
 ];

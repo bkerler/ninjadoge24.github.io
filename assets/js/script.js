@@ -1,40 +1,72 @@
 $(document).ready(function() {
     Posts = [];
-    $("article").html("<small>Fetching posts...</small>");
-    fetchAndRenderPosts();
+    Selected = window.location.hash.substr(1);
+
+    for (var i = Index.length - 1; i >= 0; i--) {
+        $("article").append("<section id='" + Index[i] + "'></section>");
+    };
+
+    window.onhashchange = function() {
+        Selected = window.location.hash.substr(1);
+        load();
+    };
+
+    load();
 });
 
-function fetchAndRenderPosts() {
+function load()
+{
+    if (Index.length == 0) {
+        $(".info").html("There aren't any posts yet! Come back later.");
+    } else if (Selected != "" && Index.indexOf(Selected) == -1) {
+        document.title = "ninjadoge24's blog";
+        $(".info").html("Sorry! That post doesn't exist.");
+        $("section").html("");
+    } else if (Posts.length == 0) {
+        fetch(render);
+    } else {
+        render();
+    }
+}
+
+function fetch(callback) {
+    $(".info").html("Fetching posts&hellip;");
     for (var i = Index.length - 1; i >= 0; i--) {
         (function(i) {
-            var post = Index[i];
-            $.get("posts/" + post, function(data) {
-                Posts[i] = data;
-                renderPosts();
+            var slug = Index[i] + ".md";
+            $.get("posts/" + slug, function(content) {
+                Posts[i] = content;
+                Posts[i] += "\n[permalink] (" + window.location.href + ")";
+                Posts[i] += "\n[history] (https://github.com/ninjadoge24/ninjadoge24.github.io/commits/master/posts/" + slug + ")";
+                Posts[i] += "\n[edit] (https://github.com/ninjadoge24/ninjadoge24.github.io/edit/master/posts/" + slug + ")";
+                callback();
             });
         })(i);
     };
 };
 
-function renderPosts() {
-    $("article").html("");
-    for (var i = Posts.length - 1; i >= 0; i--) {
-        if (Posts[i]) {
-            $("article").append("<section id='" + i + "'></section>");
-            $("#" + i).html(markdown.toHTML(Posts[i]));
-            $("#" + i).children().first().attr("onClick", "renderPost(" + i + ")");
-        };
-    };
-};
-
-function renderPost(id) {
-    if (Posts[id]) {
-        $("article").html("<section id='" + id + "'></section>");
-        $("#" + id).html(markdown.toHTML(Posts[id]));
-        $("#" + id).append("<small><a target='_blank' href='https://github.com/ninjadoge24/ninjadoge24.github.io/commits/master/posts/" + Index[id] + "' >history</a></small> &middot; ");
-        $("#" + id).append("<small><a target='_blank' href='https://github.com/ninjadoge24/ninjadoge24.github.io/edit/master/posts/" + Index[id] + "'>edit</a></small> &middot; ");
-        $("#" + id).append("<small><a target='_blank' href='https://raw.githubusercontent.com/ninjadoge24/ninjadoge24.github.io/master/posts/" + Index[id] + "'>source</a></small>");
+function render() {
+    window.scrollTo(0, 0);
+    $(".info").html("");
+    if (Selected != "" && Posts[Index.indexOf(Selected)]) {
+        var i = Index.indexOf(Selected);
+        var id = "#" + Selected;
+        $("section").html("");
+        $(id).html(markdown.toHTML(Posts[i]));
+        var title = $(id).children().first().html();
+        var link = "<a href='" + id + "'>" + title + "</a>";
+        document.title = title + " - ninjadoge24's blog";
+        $(id).children().first().html(link);
     } else {
-        $("article").html("<small>Sorry! That post doesn't exist.</small>");
+        document.title = "ninjadoge24's blog";
+        for (var i = Posts.length - 1; i >= 0; i--) {
+            var id = "#" + Index[i];
+            if ($(id).html() == "") {
+                $(id).html(markdown.toHTML(Posts[i]));
+                var title = $(id).children().first().html();
+                var link = "<a href='" + id + "'>" + title + "</a>";
+                $(id).children().first().html(link);
+            };
+        };
     };
 };

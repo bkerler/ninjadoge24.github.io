@@ -9,7 +9,6 @@ header
 {
     background: url('../img/doge.jpg') no-repeat;
     border-radius: 60px;
-    cursor: pointer;
     margin: 50px auto;
     height: 120px;
     width: 120px;
@@ -17,22 +16,41 @@ header
 
 article
 {
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     margin: 50px 25px;
 }
 
 article section
 {
-    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-    margin: 0 0 50px 0;
     text-align: left;
 }
 
-article section :first-child
+article section :first-child a
 {
-    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+    opacity: inherit;
+    text-decoration: none;
 }
 
 article section p
 {
     line-height: 24px;
+}
+
+article section a
+{
+    color: black;
+    font-size: small;
+    opacity: 0.5;
+}
+
+article section a:hover
+{
+    opacity: 1;
+}
+
+article section :last-child
+{
+    margin: 0 0 50px 0;
 }
