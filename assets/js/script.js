@@ -1,17 +1,27 @@
-$("article").html("<small>Fetching posts...</small>");
-var posts = [];
-for (var i = Index.length - 1; i >= 0; i--) {
-	(function(i) {
-		var post = Index[i];
-		$.get("posts/" + post, function(data) {
-			posts[i] = data;
-			$("article").html("");
-			for (var j = posts.length - 1; j >= 0; j--) {
-				if (posts[j]) {
-					$("article").append("<section id='" + j + "'></section>");
-					$("#" + j).html("<pre>" + posts[j] + "</pre>");
-				};
-			};
-		});
-	})(i);
+$(document).ready(function() {
+    Posts = [];
+    $("article").html("<small>Fetching posts...</small>");
+    fetchAndRenderPosts();
+});
+
+function fetchAndRenderPosts() {
+    for (var i = Index.length - 1; i >= 0; i--) {
+        (function(i) {
+            var post = Index[i];
+            $.get("posts/" + post, function(data) {
+                Posts[i] = data;
+                renderPosts();
+            });
+        })(i);
+    };
+};
+
+function renderPosts() {
+    $("article").html("");
+    for (var i = Posts.length - 1; i >= 0; i--) {
+        if (Posts[i]) {
+            $("article").append("<section id='" + i + "'></section>");
+            $("#" + i).html("<pre>" + Posts[i] + "</pre>");
+        };
+    };
 };
