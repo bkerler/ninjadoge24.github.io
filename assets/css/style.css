@@ -9,6 +9,7 @@ header
 {
     background: url('../img/doge.jpg') no-repeat;
     border-radius: 60px;
+    cursor: pointer;
     margin: 50px auto;
     height: 120px;
     width: 120px;
