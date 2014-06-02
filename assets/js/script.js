@@ -20,7 +20,7 @@ function renderPosts() {
     $("article").html("");
     for (var i = Posts.length - 1; i >= 0; i--) {
         if (Posts[i]) {
-            $("article").append("<section id='" + i + "'></section>");
+            $("article").append("<section id='" + i + "' onClick='renderPost(this.id)'></section>");
             $("#" + i).html("<pre>" + Posts[i] + "</pre>");
         };
     };
