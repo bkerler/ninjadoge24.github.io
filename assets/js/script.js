@@ -36,7 +36,7 @@ function fetch(callback) {
             var slug = Index[i] + ".md";
             $.get("posts/" + slug, function(content) {
                 Posts[i] = content;
-                Posts[i] += "\n[permalink] (" + window.location.href + ")";
+                Posts[i] += "\n[permalink] (#" + Index[i] + ")";
                 Posts[i] += "\n[history] (https://github.com/ninjadoge24/ninjadoge24.github.io/commits/master/posts/" + slug + ")";
                 Posts[i] += "\n[edit] (https://github.com/ninjadoge24/ninjadoge24.github.io/edit/master/posts/" + slug + ")";
                 callback();
