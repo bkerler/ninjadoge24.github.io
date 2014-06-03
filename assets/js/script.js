@@ -47,17 +47,17 @@ function fetch(callback) {
 
 function render() {
     window.scrollTo(0, 0);
-    $(".info").html("");
     if (Selected != "" && Posts[Index.indexOf(Selected)]) {
         var i = Index.indexOf(Selected);
         var id = "#" + Selected;
-        $("section").html("");
+        $(".info, section").html("");
         $(id).html(markdown.toHTML(Posts[i]));
         var title = $(id).children().first().html();
         var link = "<a href='" + id + "'>" + title + "</a>";
         document.title = title + " - ninjadoge24's blog";
         $(id).children().first().html(link);
-    } else {
+    } else if (Selected == "") {
+        $(".info").html("");
         document.title = "ninjadoge24's blog";
         for (var i = Posts.length - 1; i >= 0; i--) {
             var id = "#" + Index[i];
