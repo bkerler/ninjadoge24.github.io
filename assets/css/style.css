@@ -38,6 +38,11 @@ article section p
     line-height: 24px;
 }
 
+article section img
+{
+    width: 100%;
+}
+
 article section a
 {
     color: black;
