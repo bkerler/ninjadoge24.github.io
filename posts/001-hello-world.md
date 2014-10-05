@@ -1,3 +1,3 @@
 ##Hello World!
 
-This shit's awesome.
+This is doge.
