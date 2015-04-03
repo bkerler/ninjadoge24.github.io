@@ -46,7 +46,11 @@ function fetch(callback) {
 };
 
 function render() {
-    window.scrollTo(0, 0);
+    if (location.hash) {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 100);
+    }
     if (Selected != "" && Posts[Index.indexOf(Selected)]) {
         var i = Index.indexOf(Selected);
         var id = "#" + Selected;
