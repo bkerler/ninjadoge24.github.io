@@ -1,6 +1,6 @@
 #How I cracked NQ Vault's "encryption"
 
-Google it up if you want to: NQ Vault. I don't wanna link it from here. It's got some really nice ratings on the Play Store.
+~~Google it up if you want to:~~ [NQ Vault](https://play.google.com/store/apps/details?id=com.netqin.ps). ~~I don't wanna link it from here.~~ It's got some really nice ratings on the Play Store.
 
 >★ _The most popular app with over 30 million users worldwide_
 
