@@ -1,4 +1,4 @@
-#How I cracked NQ Vault
+#How I cracked NQ Vault's "encryption"
 
 Google it up if you want to: NQ Vault. I don't wanna link it form here. It's got some really nice ratings on the Play Store.
 
