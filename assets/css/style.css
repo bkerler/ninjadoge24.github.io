@@ -23,6 +23,7 @@ article
 article section
 {
     text-align: left;
+    margin-bottom: 50px;
 }
 
 article section :first-child a
@@ -33,6 +34,11 @@ article section :first-child a
     text-decoration: none;
 }
 
+article section h1
+{
+    text-align: center;
+}
+
 article section p
 {
     line-height: 24px;
@@ -40,22 +46,27 @@ article section p
 
 article section img
 {
-    width: 100%;
+    margin: 16px auto !important;
+    display: block !important;
 }
 
-article section a
+article section code
+{
+    background-color: #f2f2f2;
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    font-family: monospace;
+}
+
+article section p:last-child a
 {
     color: black;
     font-size: small;
     opacity: 0.5;
 }
 
-article section a:hover
+article section p:last-child a:hover
 {
     opacity: 1;
-}
-
-article section :last-child
-{
-    margin: 0 0 50px 0;
 }
