@@ -44,6 +44,13 @@ article section p
     line-height: 24px;
 }
 
+@media (max-width: 720px) {
+    article section img
+    {
+        width: 100%;
+    }
+}
+
 article section img
 {
     margin: 24px auto !important;
@@ -57,6 +64,7 @@ article section code
     width: auto;
     padding: 5px;
     font-family: monospace;
+    white-space:pre;
 }
 
 article section p:last-child a
