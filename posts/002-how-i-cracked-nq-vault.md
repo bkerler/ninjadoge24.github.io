@@ -1,5 +1,17 @@
 #How I cracked NQ Vault
 
+Google it up if you want to: NQ Vault. I don't wanna link it form here. It's got some really nice ratings on the Play Store.
+
+>★ _The most popular app with over 30 million users worldwide_
+
+>★ _CTIA - "The Best App of CTIA by the Techlicious 2012 Best of CTIA Awards"_
+
+>★ _PC Magazine - "PC Magazine Best Apps"_
+
+>★ _TRUSTe - Received "TRUSTe Privacy Seal"_
+
+>★ _Global Mobile Internet Conference App Space - "A top 50 app"_
+
 ![NQ Vault](assets/img/nq-vault.png "NQ Vault")
 
 ###Day 1
