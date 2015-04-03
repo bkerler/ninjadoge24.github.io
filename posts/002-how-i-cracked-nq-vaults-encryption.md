@@ -1,6 +1,6 @@
 #How I cracked NQ Vault's "encryption"
 
-Google it up if you want to: NQ Vault. I don't wanna link it form here. It's got some really nice ratings on the Play Store.
+Google it up if you want to: NQ Vault. I don't wanna link it from here. It's got some really nice ratings on the Play Store.
 
 >★ _The most popular app with over 30 million users worldwide_
 
@@ -35,7 +35,7 @@ Vault's sqlite db told me where to find the encrypted file.
 
 ![NQ Vault db](assets/img/nq-vault-db.png "NQ Vault db")
 
-The encrypted file, 1427858907178.png:
+The encrypted file, 1427858907181.png:
 
     0000000: 8d54 4a43 090e 1e0e 0404 0409 4d4c 4056  .TJC........ML@V
     0000010: 0404 0405 0404 0405 0c06 0404 0494 7357  ..............sW
