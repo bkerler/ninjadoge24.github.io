@@ -163,7 +163,7 @@ Messed around using passwords like `000`, `001`, `002`... to see if there was a 
               ...
            010 | 4f
            011 | 50
-           012 | 21
+           012 | 51
               ...
           2424 | 04
     4815162342 | cc
