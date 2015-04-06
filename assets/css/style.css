@@ -23,7 +23,6 @@ article
 article section
 {
     text-align: left;
-    margin-bottom: 50px;
 }
 
 article section :first-child a
@@ -39,11 +38,6 @@ article section h1
     text-align: center;
 }
 
-article section p
-{
-    line-height: 24px;
-}
-
 @media (max-width: 720px) {
     article section img
     {
@@ -57,21 +51,13 @@ article section img
     display: block !important;
 }
 
-article section code
-{
-    background-color: #f2f2f2;
-    display: inline-block;
-    width: auto;
-    padding: 5px;
-    font-family: monospace;
-    white-space:pre;
-}
-
 article section p:last-child a
 {
     color: black;
     font-size: small;
     opacity: 0.5;
+    margin-bottom: 50px;
+    display: inline-block;
 }
 
 article section p:last-child a:hover
