@@ -39,7 +39,6 @@ function fetch(callback) {
                 Posts[i] += "\n[permalink](#" + Index[i] + ")";
                 Posts[i] += "\n[history](https://github.com/ninjadoge24/ninjadoge24.github.io/commits/master/posts/" + slug + ")";
                 Posts[i] += "\n[edit](https://github.com/ninjadoge24/ninjadoge24.github.io/edit/master/posts/" + slug + ")";
-                console.log(Posts[i]);
                 callback();
             });
         })(i);
