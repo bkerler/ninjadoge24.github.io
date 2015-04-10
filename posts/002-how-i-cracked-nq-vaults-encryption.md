@@ -228,6 +228,27 @@ for i in `seq 0 255`; do
 done
 ```
 
+Here's the code in Java to get the Key from Pin without bruteforcing, here Pin "010" used as an example, code reversed by B. Kerler :
+```
+    public static char main(String pincode) {
+        char result=(char)pincode.hashCode();
+        System.out.printf("Char for decryption: 0x%02X\n",(int)(result&0xFF));
+        return (result&0xFF);
+    }
+```
+The function hashCode is Java defined and calculated as
+```
+    static int hashCode(String pincode)
+    {
+        int h = 0;
+        for (int i = 0; i < pincode.length(); i++) 
+        {
+            h = 31*h + pincode.charAt(i);
+        }
+        return h;
+    }
+```
+
 Compile `vault-crack.c` and put it in a directory along with the script and an encrypted file from the vault. Then you can run `./vault-crack.sh ENCRYPTED_FILE` to get your decrypted file.
 
 There you go! That was fun.
